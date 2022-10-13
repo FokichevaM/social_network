@@ -1,0 +1,16 @@
+.dialogs {
+	background-color: rgb(134, 58, 58);
+	width: 100%;
+	display: flex;
+}
+
+.dialogs .dialogs-items {
+	background-color: burlywood;
+	color: rgb(6, 151, 255);
+	width: 30%;
+}
+
+.dialogs .dialogs-window {
+	background-color: blueviolet;
+	width: 70%;
+}

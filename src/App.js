@@ -1,25 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Header from './components/Header/Header.jsx';
+import Main from './components/Main/Main.jsx';
+import Section from './components/Main/Section/Section.jsx';
+import Footer from './components/Footer';
+import Nav from './components/Main/Nav/Nav.jsx';
+import Dialogs from './components/Main/Dialog/Dialogs';
+import Videos from './components/Main/Videos/Videos';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<BrowserRouter>
+			<div className='wrapper'>
+				<Header />
+				<Main>
+					<Nav></Nav>
+					<Routes>
+						<Route path='/profiles' element={<Section />} />
+						<Route exact path='/dialogs/*' element={<Dialogs />} />
+						<Route path='/videos' element={<Videos />} />
+					</Routes>
+				</Main>
+				<Footer />
+			</div>
+		</BrowserRouter>
+
+	);
 }
 
 export default App;

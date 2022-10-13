@@ -1,0 +1,8 @@
+.post img {
+	width: 20px;
+}
+
+.posts {
+	display: flex;
+	align-items: center;
+}
